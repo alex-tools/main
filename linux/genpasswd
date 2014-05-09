@@ -1,0 +1,1 @@
+openssl rand -base64 37 | cut -c1-37
