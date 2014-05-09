@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! $1 ]; then
+        echo "usage : $0 filename"
+exit 1
+else
+        echo "Please enter your passphrase follows by <return>"
+        read -s PASSWD
+        gpg -c --batch --cipher-algo AES256 --passphrase $PASSWD -o $1.gpg $1
+fi
+
